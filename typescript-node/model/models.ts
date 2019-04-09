@@ -8,7 +8,6 @@ export * from './bTAPIDeveloperParams';
 export * from './bTAPIKeyParams';
 export * from './bTAPIPartnerParams';
 export * from './bTAclParams';
-export * from './bTActionInfo';
 export * from './bTAddFriendParams';
 export * from './bTAddressInfo';
 export * from './bTAdminGroupParams';
@@ -73,6 +72,7 @@ export * from './bTCardParams';
 export * from './bTChangeContextParams';
 export * from './bTCloudStorageAccountInfo';
 export * from './bTCloudStorageAccountListInfo';
+export * from './bTCloudStorageAccountParams';
 export * from './bTCloudStorageObjectInfo';
 export * from './bTCloudStorageObjectListInfo';
 export * from './bTCloudStorageProviderObjectInfo';
@@ -113,6 +113,7 @@ export * from './bTDocumentElementInfo';
 export * from './bTDocumentInfo';
 export * from './bTDocumentLabelInfo';
 export * from './bTDocumentLabelParams';
+export * from './bTDocumentMergeInfo';
 export * from './bTDocumentMicroversionInfo';
 export * from './bTDocumentMigrateParams';
 export * from './bTDocumentOptionsParams';
@@ -261,6 +262,7 @@ export * from './bTPlanSubscriberInfo';
 export * from './bTProjectInfo';
 export * from './bTProjectParams';
 export * from './bTPropertyValueParam';
+export * from './bTPublishWorkflowParams';
 export * from './bTPurchaseInfo';
 export * from './bTPurchaseParams';
 export * from './bTPurchaseUserInfo';
@@ -320,6 +322,7 @@ export * from './bTThumbnailInfo';
 export * from './bTThumbnailSizeInfo';
 export * from './bTToolTreeParams';
 export * from './bTToolTreeUpdateParams';
+export * from './bTTraceParams';
 export * from './bTTranslateFormatParams';
 export * from './bTTranslateInternalParams';
 export * from './bTTranslationRequestInfo';
@@ -332,6 +335,7 @@ export * from './bTUpdateRbacRoleParams';
 export * from './bTUpdateReferenceParams';
 export * from './bTUpdateReleasePackageParams';
 export * from './bTUpdateVersionThumbnailParams';
+export * from './bTUpdateWorkflowableTestObjectParams';
 export * from './bTUpgradeOnDemandParams';
 export * from './bTUploadParams';
 export * from './bTUploadStateParams';
@@ -352,6 +356,7 @@ export * from './bTUserUpdateParams';
 export * from './bTUserUpdateSpecsParams';
 export * from './bTUserUsagesSummary';
 export * from './bTUserWebPreferencesParams';
+export * from './bTValidateWorkflowParams';
 export * from './bTVector2d';
 export * from './bTVector3d';
 export * from './bTVersionInfo';
@@ -363,13 +368,14 @@ export * from './bTWebClientCapabilitiesParams';
 export * from './bTWebRendererPerformanceMeasurementParams';
 export * from './bTWebhookOptions';
 export * from './bTWebhookParams';
-export * from './bTWorkflowInfo';
+export * from './bTWorkflowActionInfo';
+export * from './bTWorkflowPropertyInfo';
+export * from './bTWorkflowSnapshotInfo';
 export * from './bTWorkflowStateInfo';
+export * from './bTWorkflowableTestObjectInfo';
 export * from './bTWorkspaceInfo';
 export * from './bTWorkspacePartParams';
-export * from './bodyPart';
 export * from './bodyPartHeaders';
-export * from './bodyPartMediaType';
 export * from './callback';
 export * from './card';
 export * from './clientLogEntry';
@@ -379,7 +385,6 @@ export * from './configurationEntry';
 export * from './configurationInfoEntry';
 export * from './contact';
 export * from './content';
-export * from './contentDisposition';
 export * from './contentItem';
 export * from './coupon';
 export * from './customer';
@@ -394,9 +399,6 @@ export * from './example';
 export * from './externalAccount';
 export * from './externalAccountCollection';
 export * from './externalDocumentation';
-export * from './formDataBodyPart';
-export * from './formDataContentDisposition';
-export * from './formDataMultiPart';
 export * from './globalPermissionInfo';
 export * from './header';
 export * from './info';
@@ -407,8 +409,6 @@ export * from './license';
 export * from './link';
 export * from './mediaType';
 export * from './message';
-export * from './messageBodyWorkers';
-export * from './multiPart';
 export * from './nextCharge';
 export * from './nextRecurringCharge';
 export * from './oAuthFlow';
@@ -457,7 +457,6 @@ import { BTAPIDeveloperParams } from './bTAPIDeveloperParams';
 import { BTAPIKeyParams } from './bTAPIKeyParams';
 import { BTAPIPartnerParams } from './bTAPIPartnerParams';
 import { BTAclParams } from './bTAclParams';
-import { BTActionInfo } from './bTActionInfo';
 import { BTAddFriendParams } from './bTAddFriendParams';
 import { BTAddressInfo } from './bTAddressInfo';
 import { BTAdminGroupParams } from './bTAdminGroupParams';
@@ -522,6 +521,7 @@ import { BTCardParams } from './bTCardParams';
 import { BTChangeContextParams } from './bTChangeContextParams';
 import { BTCloudStorageAccountInfo } from './bTCloudStorageAccountInfo';
 import { BTCloudStorageAccountListInfo } from './bTCloudStorageAccountListInfo';
+import { BTCloudStorageAccountParams } from './bTCloudStorageAccountParams';
 import { BTCloudStorageObjectInfo } from './bTCloudStorageObjectInfo';
 import { BTCloudStorageObjectListInfo } from './bTCloudStorageObjectListInfo';
 import { BTCloudStorageProviderObjectInfo } from './bTCloudStorageProviderObjectInfo';
@@ -562,6 +562,7 @@ import { BTDocumentElementInfo } from './bTDocumentElementInfo';
 import { BTDocumentInfo } from './bTDocumentInfo';
 import { BTDocumentLabelInfo } from './bTDocumentLabelInfo';
 import { BTDocumentLabelParams } from './bTDocumentLabelParams';
+import { BTDocumentMergeInfo } from './bTDocumentMergeInfo';
 import { BTDocumentMicroversionInfo } from './bTDocumentMicroversionInfo';
 import { BTDocumentMigrateParams } from './bTDocumentMigrateParams';
 import { BTDocumentOptionsParams } from './bTDocumentOptionsParams';
@@ -710,6 +711,7 @@ import { BTPlanSubscriberInfo } from './bTPlanSubscriberInfo';
 import { BTProjectInfo } from './bTProjectInfo';
 import { BTProjectParams } from './bTProjectParams';
 import { BTPropertyValueParam } from './bTPropertyValueParam';
+import { BTPublishWorkflowParams } from './bTPublishWorkflowParams';
 import { BTPurchaseInfo } from './bTPurchaseInfo';
 import { BTPurchaseParams } from './bTPurchaseParams';
 import { BTPurchaseUserInfo } from './bTPurchaseUserInfo';
@@ -769,6 +771,7 @@ import { BTThumbnailInfo } from './bTThumbnailInfo';
 import { BTThumbnailSizeInfo } from './bTThumbnailSizeInfo';
 import { BTToolTreeParams } from './bTToolTreeParams';
 import { BTToolTreeUpdateParams } from './bTToolTreeUpdateParams';
+import { BTTraceParams } from './bTTraceParams';
 import { BTTranslateFormatParams } from './bTTranslateFormatParams';
 import { BTTranslateInternalParams } from './bTTranslateInternalParams';
 import { BTTranslationRequestInfo } from './bTTranslationRequestInfo';
@@ -781,6 +784,7 @@ import { BTUpdateRbacRoleParams } from './bTUpdateRbacRoleParams';
 import { BTUpdateReferenceParams } from './bTUpdateReferenceParams';
 import { BTUpdateReleasePackageParams } from './bTUpdateReleasePackageParams';
 import { BTUpdateVersionThumbnailParams } from './bTUpdateVersionThumbnailParams';
+import { BTUpdateWorkflowableTestObjectParams } from './bTUpdateWorkflowableTestObjectParams';
 import { BTUpgradeOnDemandParams } from './bTUpgradeOnDemandParams';
 import { BTUploadParams } from './bTUploadParams';
 import { BTUploadStateParams } from './bTUploadStateParams';
@@ -801,6 +805,7 @@ import { BTUserUpdateParams } from './bTUserUpdateParams';
 import { BTUserUpdateSpecsParams } from './bTUserUpdateSpecsParams';
 import { BTUserUsagesSummary } from './bTUserUsagesSummary';
 import { BTUserWebPreferencesParams } from './bTUserWebPreferencesParams';
+import { BTValidateWorkflowParams } from './bTValidateWorkflowParams';
 import { BTVector2d } from './bTVector2d';
 import { BTVector3d } from './bTVector3d';
 import { BTVersionInfo } from './bTVersionInfo';
@@ -812,13 +817,14 @@ import { BTWebClientCapabilitiesParams } from './bTWebClientCapabilitiesParams';
 import { BTWebRendererPerformanceMeasurementParams } from './bTWebRendererPerformanceMeasurementParams';
 import { BTWebhookOptions } from './bTWebhookOptions';
 import { BTWebhookParams } from './bTWebhookParams';
-import { BTWorkflowInfo } from './bTWorkflowInfo';
+import { BTWorkflowActionInfo } from './bTWorkflowActionInfo';
+import { BTWorkflowPropertyInfo } from './bTWorkflowPropertyInfo';
+import { BTWorkflowSnapshotInfo } from './bTWorkflowSnapshotInfo';
 import { BTWorkflowStateInfo } from './bTWorkflowStateInfo';
+import { BTWorkflowableTestObjectInfo } from './bTWorkflowableTestObjectInfo';
 import { BTWorkspaceInfo } from './bTWorkspaceInfo';
 import { BTWorkspacePartParams } from './bTWorkspacePartParams';
-import { BodyPart } from './bodyPart';
 import { BodyPartHeaders } from './bodyPartHeaders';
-import { BodyPartMediaType } from './bodyPartMediaType';
 import { Callback } from './callback';
 import { Card } from './card';
 import { ClientLogEntry } from './clientLogEntry';
@@ -828,7 +834,6 @@ import { ConfigurationEntry } from './configurationEntry';
 import { ConfigurationInfoEntry } from './configurationInfoEntry';
 import { Contact } from './contact';
 import { Content } from './content';
-import { ContentDisposition } from './contentDisposition';
 import { ContentItem } from './contentItem';
 import { Coupon } from './coupon';
 import { Customer } from './customer';
@@ -843,9 +848,6 @@ import { Example } from './example';
 import { ExternalAccount } from './externalAccount';
 import { ExternalAccountCollection } from './externalAccountCollection';
 import { ExternalDocumentation } from './externalDocumentation';
-import { FormDataBodyPart } from './formDataBodyPart';
-import { FormDataContentDisposition } from './formDataContentDisposition';
-import { FormDataMultiPart } from './formDataMultiPart';
 import { GlobalPermissionInfo } from './globalPermissionInfo';
 import { Header } from './header';
 import { Info } from './info';
@@ -856,8 +858,6 @@ import { License } from './license';
 import { Link } from './link';
 import { MediaType } from './mediaType';
 import { Message } from './message';
-import { MessageBodyWorkers } from './messageBodyWorkers';
-import { MultiPart } from './multiPart';
 import { NextCharge } from './nextCharge';
 import { NextRecurringCharge } from './nextRecurringCharge';
 import { OAuthFlow } from './oAuthFlow';
@@ -936,8 +936,8 @@ let enumsMap: {[index: string]: any} = {
         "BTFeatureState.FeatureStatusEnum": BTFeatureState.FeatureStatusEnum,
         "BTIdentity.IdentityTypeEnum": BTIdentity.IdentityTypeEnum,
         "BTImportCloudObjectParams.OwnerTypeEnum": BTImportCloudObjectParams.OwnerTypeEnum,
-        "BTImportForeignDataParams.FileFormatEnum": BTImportForeignDataParams.FileFormatEnum,
         "BTImportForeignDataParams.OwnerTypeEnum": BTImportForeignDataParams.OwnerTypeEnum,
+        "BTImportForeignDataParams.FileFormatEnum": BTImportForeignDataParams.FileFormatEnum,
         "BTInAppMessageContent.StateEnum": BTInAppMessageContent.StateEnum,
         "BTMFeature.RegenerateAsVersionEnum": BTMFeature.RegenerateAsVersionEnum,
         "BTNodeStatus.StatusEnumEnum": BTNodeStatus.StatusEnumEnum,
@@ -950,6 +950,7 @@ let enumsMap: {[index: string]: any} = {
         "BTPModuleId.DocumentationTypeEnum": BTPModuleId.DocumentationTypeEnum,
         "BTPNode.DocumentationTypeEnum": BTPNode.DocumentationTypeEnum,
         "BTPartMetadataInfo.StateEnum": BTPartMetadataInfo.StateEnum,
+        "BTPublishWorkflowParams.WorkflowTypeEnum": BTPublishWorkflowParams.WorkflowTypeEnum,
         "BTRootDiffInfo.TypeEnum": BTRootDiffInfo.TypeEnum,
         "BTSurfaceDescription.TypeEnum": BTSurfaceDescription.TypeEnum,
         "BTTranslationRequestInfo.RequestStateEnum": BTTranslationRequestInfo.RequestStateEnum,
@@ -973,7 +974,6 @@ let typeMap: {[index: string]: any} = {
     "BTAPIKeyParams": BTAPIKeyParams,
     "BTAPIPartnerParams": BTAPIPartnerParams,
     "BTAclParams": BTAclParams,
-    "BTActionInfo": BTActionInfo,
     "BTAddFriendParams": BTAddFriendParams,
     "BTAddressInfo": BTAddressInfo,
     "BTAdminGroupParams": BTAdminGroupParams,
@@ -1038,6 +1038,7 @@ let typeMap: {[index: string]: any} = {
     "BTChangeContextParams": BTChangeContextParams,
     "BTCloudStorageAccountInfo": BTCloudStorageAccountInfo,
     "BTCloudStorageAccountListInfo": BTCloudStorageAccountListInfo,
+    "BTCloudStorageAccountParams": BTCloudStorageAccountParams,
     "BTCloudStorageObjectInfo": BTCloudStorageObjectInfo,
     "BTCloudStorageObjectListInfo": BTCloudStorageObjectListInfo,
     "BTCloudStorageProviderObjectInfo": BTCloudStorageProviderObjectInfo,
@@ -1078,6 +1079,7 @@ let typeMap: {[index: string]: any} = {
     "BTDocumentInfo": BTDocumentInfo,
     "BTDocumentLabelInfo": BTDocumentLabelInfo,
     "BTDocumentLabelParams": BTDocumentLabelParams,
+    "BTDocumentMergeInfo": BTDocumentMergeInfo,
     "BTDocumentMicroversionInfo": BTDocumentMicroversionInfo,
     "BTDocumentMigrateParams": BTDocumentMigrateParams,
     "BTDocumentOptionsParams": BTDocumentOptionsParams,
@@ -1226,6 +1228,7 @@ let typeMap: {[index: string]: any} = {
     "BTProjectInfo": BTProjectInfo,
     "BTProjectParams": BTProjectParams,
     "BTPropertyValueParam": BTPropertyValueParam,
+    "BTPublishWorkflowParams": BTPublishWorkflowParams,
     "BTPurchaseInfo": BTPurchaseInfo,
     "BTPurchaseParams": BTPurchaseParams,
     "BTPurchaseUserInfo": BTPurchaseUserInfo,
@@ -1285,6 +1288,7 @@ let typeMap: {[index: string]: any} = {
     "BTThumbnailSizeInfo": BTThumbnailSizeInfo,
     "BTToolTreeParams": BTToolTreeParams,
     "BTToolTreeUpdateParams": BTToolTreeUpdateParams,
+    "BTTraceParams": BTTraceParams,
     "BTTranslateFormatParams": BTTranslateFormatParams,
     "BTTranslateInternalParams": BTTranslateInternalParams,
     "BTTranslationRequestInfo": BTTranslationRequestInfo,
@@ -1297,6 +1301,7 @@ let typeMap: {[index: string]: any} = {
     "BTUpdateReferenceParams": BTUpdateReferenceParams,
     "BTUpdateReleasePackageParams": BTUpdateReleasePackageParams,
     "BTUpdateVersionThumbnailParams": BTUpdateVersionThumbnailParams,
+    "BTUpdateWorkflowableTestObjectParams": BTUpdateWorkflowableTestObjectParams,
     "BTUpgradeOnDemandParams": BTUpgradeOnDemandParams,
     "BTUploadParams": BTUploadParams,
     "BTUploadStateParams": BTUploadStateParams,
@@ -1317,6 +1322,7 @@ let typeMap: {[index: string]: any} = {
     "BTUserUpdateSpecsParams": BTUserUpdateSpecsParams,
     "BTUserUsagesSummary": BTUserUsagesSummary,
     "BTUserWebPreferencesParams": BTUserWebPreferencesParams,
+    "BTValidateWorkflowParams": BTValidateWorkflowParams,
     "BTVector2d": BTVector2d,
     "BTVector3d": BTVector3d,
     "BTVersionInfo": BTVersionInfo,
@@ -1328,13 +1334,14 @@ let typeMap: {[index: string]: any} = {
     "BTWebRendererPerformanceMeasurementParams": BTWebRendererPerformanceMeasurementParams,
     "BTWebhookOptions": BTWebhookOptions,
     "BTWebhookParams": BTWebhookParams,
-    "BTWorkflowInfo": BTWorkflowInfo,
+    "BTWorkflowActionInfo": BTWorkflowActionInfo,
+    "BTWorkflowPropertyInfo": BTWorkflowPropertyInfo,
+    "BTWorkflowSnapshotInfo": BTWorkflowSnapshotInfo,
     "BTWorkflowStateInfo": BTWorkflowStateInfo,
+    "BTWorkflowableTestObjectInfo": BTWorkflowableTestObjectInfo,
     "BTWorkspaceInfo": BTWorkspaceInfo,
     "BTWorkspacePartParams": BTWorkspacePartParams,
-    "BodyPart": BodyPart,
     "BodyPartHeaders": BodyPartHeaders,
-    "BodyPartMediaType": BodyPartMediaType,
     "Callback": Callback,
     "Card": Card,
     "ClientLogEntry": ClientLogEntry,
@@ -1344,7 +1351,6 @@ let typeMap: {[index: string]: any} = {
     "ConfigurationInfoEntry": ConfigurationInfoEntry,
     "Contact": Contact,
     "Content": Content,
-    "ContentDisposition": ContentDisposition,
     "ContentItem": ContentItem,
     "Coupon": Coupon,
     "Customer": Customer,
@@ -1359,9 +1365,6 @@ let typeMap: {[index: string]: any} = {
     "ExternalAccount": ExternalAccount,
     "ExternalAccountCollection": ExternalAccountCollection,
     "ExternalDocumentation": ExternalDocumentation,
-    "FormDataBodyPart": FormDataBodyPart,
-    "FormDataContentDisposition": FormDataContentDisposition,
-    "FormDataMultiPart": FormDataMultiPart,
     "GlobalPermissionInfo": GlobalPermissionInfo,
     "Header": Header,
     "Info": Info,
@@ -1372,8 +1375,6 @@ let typeMap: {[index: string]: any} = {
     "Link": Link,
     "MediaType": MediaType,
     "Message": Message,
-    "MessageBodyWorkers": MessageBodyWorkers,
-    "MultiPart": MultiPart,
     "NextCharge": NextCharge,
     "NextRecurringCharge": NextRecurringCharge,
     "OAuthFlow": OAuthFlow,
@@ -1462,7 +1463,7 @@ export class ObjectSerializer {
             }
             return transformedData;
         } else if (type === "Date") {
-            return data.toISOString();
+            return data.toString();
         } else {
             if (enumsMap[type]) {
                 return data;
