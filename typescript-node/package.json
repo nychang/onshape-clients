@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.13.1"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "0.0.9-4.0.0-beta3"
   }
 }
