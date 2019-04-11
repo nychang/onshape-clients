@@ -1,0 +1,30 @@
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(require("./accountsApi"));
+var accountsApi_1 = require("./accountsApi");
+__export(require("./appElementsApi"));
+var appElementsApi_1 = require("./appElementsApi");
+__export(require("./assembliesApi"));
+var assembliesApi_1 = require("./assembliesApi");
+__export(require("./blobElementsApi"));
+var blobElementsApi_1 = require("./blobElementsApi");
+__export(require("./defaultApi"));
+var defaultApi_1 = require("./defaultApi");
+__export(require("./documentsApi"));
+var documentsApi_1 = require("./documentsApi");
+__export(require("./elementsApi"));
+var elementsApi_1 = require("./elementsApi");
+__export(require("./endpointsApi"));
+var endpointsApi_1 = require("./endpointsApi");
+__export(require("./metadataApi"));
+var metadataApi_1 = require("./metadataApi");
+__export(require("./partStudiosApi"));
+var partStudiosApi_1 = require("./partStudiosApi");
+__export(require("./partsApi"));
+var partsApi_1 = require("./partsApi");
+__export(require("./translationsApi"));
+var translationsApi_1 = require("./translationsApi");
+exports.APIS = [accountsApi_1.AccountsApi, appElementsApi_1.AppElementsApi, assembliesApi_1.AssembliesApi, blobElementsApi_1.BlobElementsApi, defaultApi_1.DefaultApi, documentsApi_1.DocumentsApi, elementsApi_1.ElementsApi, endpointsApi_1.EndpointsApi, metadataApi_1.MetadataApi, partStudiosApi_1.PartStudiosApi, partsApi_1.PartsApi, translationsApi_1.TranslationsApi];
