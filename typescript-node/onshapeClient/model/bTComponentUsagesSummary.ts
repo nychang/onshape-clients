@@ -13,18 +13,12 @@
 import { BTStandardContentHierarchy } from './bTStandardContentHierarchy';
 
 export class BTComponentUsagesSummary {
-    'hierarchy'?: BTStandardContentHierarchy;
     'count'?: number;
     'hierarchy'?: BTStandardContentHierarchy;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "hierarchy",
-            "baseName": "hierarchy_",
-            "type": "BTStandardContentHierarchy"
-        },
         {
             "name": "count",
             "baseName": "count",
