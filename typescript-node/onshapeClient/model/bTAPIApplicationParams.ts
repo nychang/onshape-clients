@@ -12,7 +12,6 @@
 
 
 export class BTAPIApplicationParams {
-    'hiddenFromPlusMenu'?: boolean;
     'name'?: string;
     'state'?: number;
     'description'?: string;
@@ -34,11 +33,6 @@ export class BTAPIApplicationParams {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "hiddenFromPlusMenu",
-            "baseName": "hiddenFromPlusMenu_",
-            "type": "boolean"
-        },
         {
             "name": "name",
             "baseName": "name",
