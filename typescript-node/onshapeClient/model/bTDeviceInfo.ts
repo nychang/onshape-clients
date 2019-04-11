@@ -372,7 +372,7 @@ export namespace BTDeviceInfo {
         FIREFOX4 = <any> 'FIREFOX4',
         FIREFOX3 = <any> 'FIREFOX3',
         FIREFOX2 = <any> 'FIREFOX2',
-        FIREFOX15 = <any> 'FIREFOX1_5',
+        FIREFOX1 = <any> 'FIREFOX1',
         THUNDERBIRD = <any> 'THUNDERBIRD',
         THUNDERBIRD12 = <any> 'THUNDERBIRD12',
         THUNDERBIRD11 = <any> 'THUNDERBIRD11',
